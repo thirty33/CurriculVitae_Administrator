@@ -111,20 +111,14 @@ body {
   
 }
 
-/* @media (max-width: 570px) {
-
-  #app {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.2fr 1fr;
-    grid-template-areas:
-      "presentation"
-      "navigator"
-      "navigation";
-  }
-
-  #app_router_nav {
-    background-color: pink;
-  }
-} */
-
+@media (max-width: 540px) {
+    #app {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 0.1fr 1fr;
+      grid-template-areas:
+        "presentation"
+        "navigator"
+        "navigation";
+    }
+}
 </style>

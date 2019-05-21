@@ -3,20 +3,20 @@
       <nav
           id="router_nav">
           <!-- Open Burger Button -->
-          <button id="router_nav_button"
+          <button
+            id="router_nav_button"
             v-on:click="ToggleBurgerMenu">
-            <span id="open">☰</span>
-            <!-- <span class="close">×</span> -->
+              <font-awesome-icon icon="bars" size="lg" />
           </button>
           <!-- /Close Burger Button -->
           <ul id="router_nav_menu_list"
-              class="menu_list"
-              :class="{ 'burger_is_active' : burgerMenuIsActive }">
+            class="menu_list"
+            :class="{ 'burger_is_active' : burgerMenuIsActive }">
             <!-- Close burger button -->
             <div id="button_close_container">
               <button id="router_nav_button_close"
                 v-on:click="ToggleBurgerMenu">
-                <span id="close">×</span>
+                  <font-awesome-icon icon="times" size="lg"/>
               </button>
             </div>
             <!-- /Close burger button -->
@@ -57,12 +57,18 @@ export default {
 
 
 <style scoped>
+#router_nav_button,
+#router_nav_button_close {
+  background: transparent;
+  border: none;
+}
 
 #router_nav_menu_list {
   height: inherit;
   width: inherit;
   padding: 0;
-  /* margin: 5px 5px; */
+  margin: 0;
+  display:grid;
 }
 
 #router_nav {
@@ -107,22 +113,16 @@ export default {
 @media (max-width: 540px) {
 
   #router_nav_menu_list {
-    /* display: none; */
     background: rgba(255, 60, 88, .8);
     position: fixed;
     align-items: center;
-    /* justify-items: stretch; */
     margin: 0;
     left: 0;
 		top:0;
 		bottom:0;
 		right: 0;
-
     left: -100%;
     transition:.3s; 
-
-    /* display */
-    display: grid;
     grid-template-rows: 4fr 1fr 1fr 1fr 1fr 4fr;
     grid-gap:0;
   }
@@ -143,8 +143,8 @@ export default {
 
   #button_close_container {
     display: grid;
-    grid-template-rows: 0.3fr 1.5fr 10fr;
-    grid-template-columns: 0.3fr 1.5fr 10fr;
+    grid-template-rows: 0.3fr 2fr 10fr;
+    grid-template-columns: 0.3fr 2fr 10fr;
   }
 
   #router_nav_button_close {
