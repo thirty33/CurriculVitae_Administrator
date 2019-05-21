@@ -57,6 +57,7 @@ body {
 
 #app {
   width: 100vw;
+  height: 100vh;
   background-color: peru;
   display: grid;
   grid-template-columns: 1.5fr 3.5fr;
@@ -88,6 +89,9 @@ body {
   background-color: chartreuse;
 }
 
+#app_router_nav > * {
+  height: 100%;
+}
 
 /* media queries */
 @media (max-width: 1000px) {
@@ -104,9 +108,10 @@ body {
   #app_router_nav {
     background-color: blue;
   }
+  
 }
 
-@media (max-width: 570px) {
+/* @media (max-width: 570px) {
 
   #app {
     grid-template-columns: 1fr;
@@ -120,6 +125,6 @@ body {
   #app_router_nav {
     background-color: pink;
   }
-}
+} */
 
 </style>

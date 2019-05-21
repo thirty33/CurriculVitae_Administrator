@@ -10,7 +10,8 @@ export default {
 
 <style>
 #router_view {
-    background-color: blue;
+    /* background-color: blue; */
+    height: inherit;
 }
 </style>
 
