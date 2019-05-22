@@ -3,32 +3,44 @@
       <div id="presentation_foto">
 				<user-image
 					:photo_url="user_information.photo_url">
-
 				</user-image>
 			</div>
-      <div id="presentation_description"></div>
-      <div id="presentation_social_networks"></div>
+      <div id="presentation_description">
+				<description-text
+					:textDescription="user_information.description">
+				</description-text>
+			</div>
+      <div id="presentation_social_networks">
+				<user-social-networks
+					:userNetworks="user_information.technologies">
+				</user-social-networks>
+			</div>
     </div>
 </template>
 
 <script>
 import UserImage from './PresentationComponents/ImagePresentation.vue'
+import DescriptionText from './PresentationComponents/TextDescriptionPresentation.vue'
+import UserSocialNetworks from './PresentationComponents/UserNetworks.vue'
+
 export default {
 	data() {
 		return {
 			user_information: {
 				photo_url: 'avatar.png',
-				description: '',
+				description: 'DEVELOPER / POSTGRESQL, .NET CORE, XAMARIN FORMS, VUE.JS, CSS-GRID',
 				technologies: [
-					{ name: 'twitter', url: '', network_icon: ''},
-					{ name: 'github', url: '', network_icon: ''},
-					{ name: 'linkedn', url: '', network_icon: ''},
+					{ name: 'twitter', url: 'https://twitter.com/HiramArch', network_icon: 'twitter.png'},
+					{ name: 'github', url: 'https://github.com/thirty33', network_icon: 'github.png'},
+					{ name: 'linkedin', url: 'https://www.linkedin.com/in/joel-developer21/', network_icon: 'linkedin.png'}
 				]
 			}
 		}
 	},
 	components: {
-		UserImage
+		UserImage,
+		DescriptionText,
+		UserSocialNetworks
 	}
 }
 </script>
