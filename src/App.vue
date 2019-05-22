@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <div id="app_hero">this is presentation</div>
+    <div id="app_hero">
+      <presentation-wrapper>
+      </presentation-wrapper>
+    </div>
     <div id="app_nav">
       <navigator-driver>
       </navigator-driver>
@@ -15,12 +18,14 @@
 <script>
 import NavigatorDriver from './components/Navigator.vue'
 import NavigationWrapper from './components/NavigationWrapper.vue'
+import PresentationWrapper from './components/PresentationWrapper.vue'
 
 export default {
   name: 'app',
   components: {
     NavigatorDriver,
-    NavigationWrapper
+    NavigationWrapper,
+    PresentationWrapper
   }
 }
 </script>
@@ -70,6 +75,7 @@ body {
 
 #app_hero {
   grid-area: presentation;
+  display: grid;
   background-color: red;
 }
 
@@ -79,7 +85,8 @@ body {
   background-color: yellow;
 }
 
-#app_nav > * {
+#app_nav > *,
+#app_hero > * {
   height: 100%;
   width: 100%;
 }
