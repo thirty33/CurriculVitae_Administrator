@@ -26,6 +26,7 @@ export default {
 
 <style scoped>
 #user_networks_main_div {
+	grid-row: 2;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -35,6 +36,11 @@ export default {
 	margin: 0.4em 0 0 0;
 	justify-content: center;
 	justify-items: center;
+}
+
+/* media queries */
+@media (max-width: 540px) {
+
 }
 </style>
 

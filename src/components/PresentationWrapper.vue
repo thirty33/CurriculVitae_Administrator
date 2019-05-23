@@ -77,5 +77,42 @@ export default {
   grid-column: 2;
 }
 
+
+/* Keyframes */
+@media (max-width: 1000px) {
+
+	#main_div_presentation {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#presentation_foto {
+		grid-row: span 2;
+		grid-column: 1;
+	}	
+
+	#presentation_description {
+		grid-row: 1;
+		grid-column: 2;
+		display: grid;
+		align-items: center;
+		align-content: center;
+	}
+
+	#presentation_social_networks {
+		grid-row: 2;
+		grid-column: 2;
+		display: grid;
+		grid-template-rows: 0.3fr 1fr;
+	}
+}
+
+@media (max-width: 540px) {
+	#presentation_social_networks {
+		grid-template-rows: 0.1fr 1fr;
+	}
+}
+
+
 </style>
 

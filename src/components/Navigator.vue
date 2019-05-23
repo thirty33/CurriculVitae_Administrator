@@ -125,6 +125,7 @@ export default {
     transition:.3s; 
     grid-template-rows: 4fr 1fr 1fr 1fr 1fr 4fr;
     grid-gap:0;
+    z-index: 3;
   }
 
   .menu_list.burger_is_active {

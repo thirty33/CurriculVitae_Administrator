@@ -26,5 +26,19 @@ export default {
 	text-align: center;
 	font-size: 1.3em;
 }
+
+
+/* media queries */
+@media (max-width: 1000px) {
+	#main_description_text {
+		font-size: 1.8em;
+	}
+}
+
+@media (max-width: 540px) {
+	#main_description_text {
+		font-size: 1em;
+	}
+}
 </style>
 
