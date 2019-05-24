@@ -12,6 +12,11 @@
       <navigation-wrapper>
       </navigation-wrapper>
     </div>
+    <!-- modal implementation -->
+    <loading-modal v-if="showLoadingModal" @close="showLoadingModal = false">
+      <h3 slot="header">Is loading</h3>
+    </loading-modal>
+    <!-- /modal implementation -->
   </div>
 </template>
 
@@ -19,13 +24,25 @@
 import NavigatorDriver from './components/Navigator.vue'
 import NavigationWrapper from './components/NavigationWrapper.vue'
 import PresentationWrapper from './components/PresentationWrapper.vue'
+import loadingModal from './components/ModalsComponents/CustomModalComponent.vue'
 
 export default {
   name: 'app',
+  mounted() {
+    setTimeout(() => {
+      this.showLoadingModal = false;
+    }, 6000)
+  },
+  data() {
+    return {
+      showLoadingModal: true
+    }
+  },
   components: {
     NavigatorDriver,
     NavigationWrapper,
-    PresentationWrapper
+    PresentationWrapper,
+    loadingModal
   }
 }
 </script>

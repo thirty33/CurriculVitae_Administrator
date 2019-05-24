@@ -4,7 +4,7 @@
       <div id="projects_wrapper">
         <single-project
           v-for="project in projects"
-          :key="project.name">
+          :key="project.key">
         </single-project>
       </div>
     </div>

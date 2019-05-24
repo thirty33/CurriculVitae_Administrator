@@ -4,7 +4,7 @@
 			<div id="jobs_wrapper">
 				<single-job
 					v-for="job in jobs"
-					:key="job.company_name">
+					:key="job.key">
 				</single-job>
 			</div>
 		</div>
