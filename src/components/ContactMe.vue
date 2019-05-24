@@ -5,34 +5,32 @@
 				<form id="contact_me_form"
 					@submit="checkForm"
 					method="post">
-					<div class="form-group">
-							<label for="name">Nombre</label>
-							<input type="text"
-								id="name"
-								class="form-control"
-								:class="{'field_error' : nameError}"
-								v-model="name"
-								@click="removeErrorMessage">
-							<label for="subject">Asunto</label>
-							<input type="text"
-								id="subject"
-								class="form-control"
-								:class="{'field_error' : subjectError}"
-								v-model="subject"
-								@click="removeErrorMessage">
-							<label for="message">Mensaje</label>
-							<textarea 
-								id="message"
-								rows="5"
-								class="form-control"
-								:class="{'field_error' : messageError}"								
-								v-model="message"
-								@click="removeErrorMessage">
-							</textarea>
-							<input
-								type="submit"
-								value="Enviar">
-					</div>
+					<label for="name">Nombre</label>
+					<input type="text"
+						id="name"
+						class="form-control"
+						:class="{'field_error' : nameError}"
+						v-model="name"
+						@click="removeErrorMessage">
+					<label for="subject">Asunto</label>
+					<input type="text"
+						id="subject"
+						class="form-control"
+						:class="{'field_error' : subjectError}"
+						v-model="subject"
+						@click="removeErrorMessage">
+					<label for="message">Mensaje</label>
+					<textarea 
+						id="message"
+						rows="5"
+						class="form-control"
+						:class="{'field_error' : messageError}"								
+						v-model="message"
+						@click="removeErrorMessage">
+					</textarea>
+					<input
+						type="submit"
+						value="Enviar">
 				</form>
 			</div>
 		</div>
@@ -104,13 +102,33 @@ export default {
 #contact_me_form_container {
 	background-color: gray;
 	position: absolute;
-	right: 0.7em;
-  left: 0.7em;
-	top: 2em;
+	right: 11.7em;
+  left: 11.7em;
+	top: 8.7em;
 }
 
 .field_error {
 	color: red !important;
 }
+
+#contact_me_form {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 4em;
+}
+
+#contact_me_form label {
+	grid-column: 1 / 2;
+	text-align: center;
+	justify-content: center;
+	align-self: center;
+	font-size: 2em;
+}
+
+#contact_me_form input,
+#contact_me_form button {
+	grid-column: 2 / 3;
+}
+
 </style>
 
