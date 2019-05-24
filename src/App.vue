@@ -14,7 +14,8 @@
     </div>
     <!-- modal implementation -->
     <loading-modal v-if="showLoadingModal" @close="showLoadingModal = false">
-      <h3 slot="header">Is loading</h3>
+      <activity-indicator slot="loading"></activity-indicator>
+      <div slot="body-response">{{ errorsInResponse }}</div>
     </loading-modal>
     <!-- /modal implementation -->
   </div>
@@ -25,13 +26,14 @@ import NavigatorDriver from './components/Navigator.vue'
 import NavigationWrapper from './components/NavigationWrapper.vue'
 import PresentationWrapper from './components/PresentationWrapper.vue'
 import loadingModal from './components/ModalsComponents/CustomModalComponent.vue'
+import activityIndicator from './components/ModalsComponents/ActivityIndicator.vue'
 
 export default {
   name: 'app',
-  created() {
-    // setTimeout(() => {
-    //   this.showLoadingModal = false;
-    // }, 6000)
+  beforeMount() {
+    // this.$store.dispatch('changeLoadingModalStateAsync', false);
+  },
+  mounted() {
     this.$store.dispatch('changeLoadingModalStateAsync', false);
   },
   data() {
@@ -42,13 +44,17 @@ export default {
   computed: {
     showLoadingModal() {
       return this.$store.getters.getLoadingModalState;
+    },
+    errorsInResponse() {
+      return this.$store.getters.getResponseErrors;
     }
   },
   components: {
     NavigatorDriver,
     NavigationWrapper,
     PresentationWrapper,
-    loadingModal
+    loadingModal,
+    activityIndicator
   }
 }
 </script>

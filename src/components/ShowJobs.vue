@@ -16,19 +16,11 @@ import singleJob from './SingleProjectComponent.vue'
 export default {
   data() {
 		return {
-			jobs: [
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''},
-				{company_name: '', entry_date: '', departure_date: ''}
-			]
+		}
+	},
+	computed: {
+		jobs() {
+			return this.$store.getters.getUserJobs;
 		}
 	},
 	components: {

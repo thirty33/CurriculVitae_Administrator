@@ -3,7 +3,7 @@
 		<div id="user_information_wrapper">
 			<div id="user_information_container">
 				<information-component
-				v-for="itemInformation in texts_information"
+				v-for="itemInformation in textsInformation"
 				:key=itemInformation.title_information
 				:itemInformation="itemInformation">
 				</information-component>
@@ -17,36 +17,12 @@ import informationComponent from './PresentationComponents/InformationComponent.
 export default {
 	data() {
 		return {
-			texts_information: [
-				{ title_information: 'Estudios', items_information: [
-					{ text: '5to semestre Ing. (ULA VE)' },
-					{ text: 'Desarrollo web (Platzi)' },
-					{ text: 'Redes Cisco (Cisco Academy)' }
-				]},
-				{ title_information: 'Conocimientos', items_information: [
-					{ text: 'Maquetacion (html, css, js)' },
-					{ text: 'Arquitectura MVC, MVVM' },
-					{ text: 'API REST' },
-					{ text: 'MYSQL' },
-					{ text: 'POSTGRESQL' },
-				]},
-				{ title_information: 'Habilidades adicionales', items_information: [
-					{ text: 'Diseno servicios (SWAGGER)' },
-					{ text: 'Organizacion de tareas (TRELLO)' },
-					{ text: 'Manejo de tiempo (Pomodoro technique)' }
-				]},
-				{ title_information: 'Lenguajes', items_information: [
-					{ text: 'Javascript' },
-					{ text: 'C#' },
-					{ text: 'PHP' },
-					{ text: 'C++' }
-				]},
-				{ title_information: 'Frameworks', items_information: [
-					{ text: 'Vue.js' },
-					{ text: 'Xamarin Forms' },
-					{ text: '.Net Core' }
-				]}
-			]
+
+		}
+	},
+	computed: {
+		textsInformation() {
+			return this.$store.getters.getUserTextsInformation;
 		}
 	},
 	components: {

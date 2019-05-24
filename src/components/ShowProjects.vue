@@ -16,26 +16,12 @@ import singleProject from './SingleProjectComponent.vue'
 export default {
   data() {
     return {
-      projects: [
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''},
-        { name: '', photo_url: '', description: ''}
 
-      ]
+    }
+  },
+  computed: {
+    projects() {
+      return this.$store.getters.getUserProjects;
     }
   },
   components: {
