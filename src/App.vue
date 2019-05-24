@@ -28,14 +28,20 @@ import loadingModal from './components/ModalsComponents/CustomModalComponent.vue
 
 export default {
   name: 'app',
-  mounted() {
-    setTimeout(() => {
-      this.showLoadingModal = false;
-    }, 6000)
+  created() {
+    // setTimeout(() => {
+    //   this.showLoadingModal = false;
+    // }, 6000)
+    this.$store.dispatch('changeLoadingModalStateAsync', false);
   },
   data() {
     return {
-      showLoadingModal: true
+      // showLoadingModal: false
+    }
+  },
+  computed: {
+    showLoadingModal() {
+      return this.$store.getters.getLoadingModalState;
     }
   },
   components: {
