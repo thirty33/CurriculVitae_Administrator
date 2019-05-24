@@ -93,7 +93,7 @@ export default {
 <style scoped>
 #contact_me_form_wrapper {
 	color: white;
-	background-color: purple;
+	background-color: aqua;
 	height: inherit;
 	position: relative;
 	overflow-y:scroll;
@@ -130,5 +130,28 @@ export default {
 	grid-column: 2 / 3;
 }
 
+
+/* media queries */
+@media (max-width: 1000px) 
+{
+	#contact_me_form_container {
+		right: 2em;
+		left: 2em;
+		top: 8.7em;
+	}
+
+	#contact_me_form {
+		grid-gap: 6em;
+	}
+}
+
+@media (max-width: 540px) 
+{
+	#contact_me_form_container {
+		right: 2.7em;
+		left: 2.7em;
+		top: 8.7em;
+	}
+}
 </style>
 
