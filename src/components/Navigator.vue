@@ -42,7 +42,7 @@ export default {
         { path: '/', name: 'Proyectos', item_num: 'item1'},
         { path: '/jobs', name: 'Trabajos', item_num: 'item2'},
         { path: '/userinfo', name: 'Sobre mi', item_num: 'item3'},
-        { path: '/contact', name: 'Contactame', item_num: 'item4'},
+        // { path: '/contact', name: 'Contactame', item_num: 'item4'},
       ],
       burgerMenuIsActive: false
     }
@@ -72,7 +72,7 @@ export default {
 }
 
 #router_nav {
-  background-color: purple;
+  background-color: #806d40;
   display: grid;
   grid-gap: 5px;
   justify-items: center;
@@ -85,7 +85,7 @@ export default {
   color: white;
   font-size: 3em;
   text-decoration : none;
-  background-color: aqua;
+  /* background-color: aqua; */
   opacity: 0.7;
   display: grid;
   justify-items: center;

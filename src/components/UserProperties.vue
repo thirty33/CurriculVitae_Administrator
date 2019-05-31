@@ -34,7 +34,7 @@ export default {
 <style scoped>
 #user_information_wrapper {
 	color: white;
-	background-color: purple;
+	background-color: #a1ba89;
 	height: inherit;
 	position: relative;
 	overflow-y:scroll;
