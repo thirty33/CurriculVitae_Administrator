@@ -19,7 +19,7 @@ export default {
     position: absolute;
     top: 7%; 
     left: 30%;
-		z-index: 2;
+	z-index: 2;
 }
 
 /* media queries */

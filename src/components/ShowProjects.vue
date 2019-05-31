@@ -4,7 +4,8 @@
       <div id="projects_wrapper">
         <single-project
           v-for="project in projects"
-          :key="project.key">
+          :key="project.id"
+          :project="project">
         </single-project>
       </div>
     </div>
@@ -36,7 +37,7 @@ export default {
 }
 
 #projects_container {
-  background-color: grey;
+  background-color: #a1ba89;
   height: inherit;
   position: relative;
   overflow-y:scroll;

@@ -34,7 +34,8 @@ export default {
     // this.$store.dispatch('changeLoadingModalStateAsync', false);
   },
   mounted() {
-    this.$store.dispatch('changeLoadingModalStateAsync', false);
+    // this.$store.dispatch('changeLoadingModalStateAsync', false);
+    // this.$store.dispatch('loadDataFromServiceAsync');
   },
   data() {
     return {
@@ -142,7 +143,7 @@ body {
   }
 
   #app_router_nav {
-    background-color: blue;
+    /* background-color: blue; */
   }
   
 }

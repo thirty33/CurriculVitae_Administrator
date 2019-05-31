@@ -51,7 +51,7 @@ export default {
   width: inherit;
   height: inherit;
   color: white;
-  background-color: peru;
+  background-color: #806d40;
   display: grid;
   grid-gap: 0;
   grid-template-rows: 1fr 8fr 3fr 2fr 1fr;
@@ -59,20 +59,22 @@ export default {
 }
 
 #presentation_foto {
-  background-color: purple;
+  background-color: #382633;
+	border-radius: 0.3em 0.3em 0 0;
   grid-row: 2;
   grid-column: 2;
 	position:relative;
 }
 
 #presentation_description {
-  background-color: aqua;
+  background-color: #92bda3;
   grid-row: 3;
   grid-column: 2;
 }
 
 #presentation_social_networks {
-  background-color: pink;
+  background-color: #a5cc6b;
+		border-radius: 0 0 0.3em 0.3em;
   grid-row: 4;
   grid-column: 2;
 }

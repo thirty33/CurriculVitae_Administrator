@@ -33,17 +33,16 @@ export default {
 }
 
 #information_title_container {
-	background-color: purple;
-	opacity: 0.3;
+	background-color: #a1ba89;
+	/* opacity: 0.3; */
 	grid-row: 1;
 	font-size: 1.2em;
 }
 
 #information_items_container {
-	background-color: brown;
-	opacity: 0.3;
+	background-color: #92bda3;
+	/* opacity: 0.3; */
 	grid-row: 2;
-	
 	display: grid;
 	grid-gap: 0;
 	grid-template-rows: repeat(3, 1fr);

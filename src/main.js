@@ -11,7 +11,7 @@ library.add(faBars, faTimes)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 
 Vue.use(VueRouter)
 const router = new VueRouter({mode: 'history', routes});

@@ -4,7 +4,8 @@
 			<div id="jobs_wrapper">
 				<single-job
 					v-for="job in jobs"
-					:key="job.key">
+					:key="job.key"
+					:job="job">
 				</single-job>
 			</div>
 		</div>
@@ -12,7 +13,7 @@
 </template>
 
 <script>
-import singleJob from './SingleProjectComponent.vue'
+import singleJob from './SingleJobComponent.vue'
 export default {
   data() {
 		return {
@@ -31,7 +32,7 @@ export default {
 
 <style scoped>
 #jobs_container {
-  background-color: grey;
+  background-color: #a1ba89;
   height: inherit;
   position: relative;
   overflow-y:scroll;
